@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/exerseaza-tabla-inmultirii",
+            "outputPath": "dist/exerseaza-tabla-inmultirii/browser",
+            "baseHref": "/exerseaza-tabla-inmultirii/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
