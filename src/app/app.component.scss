@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    &_inside {
+        width: 70%;
+        position: relative;
+        padding: 2rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        //min-height: 50%;
+        box-shadow: 15px -15px 12px 1px rgb(18 150 80 / 30%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &_background {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(45deg, #9b90f0, #e3f481, #f4697c, #63f1a3);
+            background-size: 400% 400%;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        &_numbers {
+            margin-top: auto;
+            margin-bottom: auto;
+
+            div {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+        &_left {
+            display: flex;
+            align-items: baseline;
+
+            input {
+                width: 50px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+
+        &_alerts {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.center {
+    align-items: center;
+}
+
+.cloud {
+    width: 100px;
+    height: 95px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    animation: floatCloud 2s ease-in-out infinite;
+    bottom: 32%;
+    right: 2%;
+  }
+  
+  @keyframes floatCloud {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
