@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container_inside">
-    <div *ngIf="numberChosen" class="row" style="width: inherit;margin-bottom: 1rem;">
+    <div *ngIf="numberChosen" class="row" class="back-btn">
       <div class="col-6" style="padding: 0;">
         <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
           title="Vrei sa alegi alta cifra?" (click)="resetValues()" style="display: block;">
@@ -34,7 +34,7 @@
     <div *ngIf="numberChosen">
       <h2>Hai, exerseaza inmultirea cu {{value}}!</h2>
       <div class="row center clearfix">
-        <div class="col-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 block">
           <div class="container_inside_left">
             <input class="form-control" type="text" disabled [(ngModel)]="value">
             <span> x </span>
@@ -43,7 +43,7 @@
             <input class="form-control" type="text" disabled [(ngModel)]="result">
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="flex-buttons">
             <button type="button" class="btn btn-outline-primary" (click)="checkNumber(1)"
               [disabled]="disableButton">1</button>
