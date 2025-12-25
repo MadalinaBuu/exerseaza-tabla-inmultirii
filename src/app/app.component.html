@@ -74,8 +74,11 @@
       <div class="container_inside_alerts">
         <div *ngIf="success">
           <div class="alert alert-success" role="alert">{{successMsg}}</div>
-          <div class="d-grid gap-2">
+          <div *ngIf="!final" class="d-grid gap-2">
             <button class="btn btn-outline-primary" type="button" (click)="nextTry()">Urmatoarea provocare!</button>
+          </div>
+          <div *ngIf="final">
+            <button class="btn btn-outline-primary" type="button" (click)="resetValues()">Incearca cu alta cifra!</button>
           </div>
         </div>
         <div *ngIf="error">

@@ -25,6 +25,7 @@ export class AppComponent {
   error: boolean = false;
 
   successMsg: string = "";
+  final: boolean = false;
 
   disableButton: boolean = false;
 
@@ -71,6 +72,7 @@ export class AppComponent {
     else {
       this.success = true;
       this.successMsg = "WOW! Ai finalizat cu succes exercitiile cu cifra " + this.value + "!";
+      this.final = true;
     }
   }
 
@@ -91,6 +93,7 @@ export class AppComponent {
     this.error = false;
     this.valueSelected = "";
     this.disableButton = false;
+    this.final = false;
   }
 
 }
